@@ -14,13 +14,13 @@ st.title("📰 Google News App")
 st.write("Fetch and display the latest top headlines using the News API.")
 
 # -------------------------------
-# Load API Key
+# Your NewsAPI Key (Replace this)
 # -------------------------------
-API_KEY = st.secrets.get("NEWS_API_KEY")
+# ⚠️ Replace DEMO_KEY_HERE with your real API key from https://newsapi.org
+API_KEY = "DEMO_KEY_HERE"
 
-if not API_KEY:
-    st.error("⚠️ Missing API key! Please add your NEWS_API_KEY in Streamlit Secrets.")
-    st.stop()
+if not API_KEY or API_KEY == "DEMO_KEY_HERE":
+    st.warning("⚠️ You are using a demo API key. Please replace it with your own from https://newsapi.org")
 
 # -------------------------------
 # User Inputs
